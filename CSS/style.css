@@ -1,3 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css); /*importa icones de reponsitório*/
+
+*{  /*atribui as configurações a tudo*/
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 100vh; /*oculpa a altura da página*/
+    overflow: hidden; /*retira a barra de rolagem inferior*/
+    position: relative;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.7); /*RGB + transparencia*/
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*imagem cobre a div, não espreme a imagem*/
+    opacity: 0.8;
+    animation: zoom 30s;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.banner{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.banner h1{
+    color: white;
+    font-size: 3em; /*1em tem o mesmo tamanho de fonte da fonte pai*/
+    font-family: "Baloo Da 2", serif;
+    font-weight: 200;
+    text-shadow: 0.25rem 0.25rem 1.5px rgba(0, 0, 0, 0.6);
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+    animation: moveBanner 3s forwards;
+    opacity: 0;
+}
+
+.banner p{
+    font-family: "Josefin Slab", serif;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0.2rem 0.09rem 1px rgba(0, 0, 0, 0.6);
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+    animation: moveBanner 3.5s forwards;
+    opacity: 0;
+}
+
+.banner button{
+    font-family: "Mulish", serif;
+    font-size: .9rem;
+    color: white;
+
+    background: #f46b45;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: moveBanner 4s forwards;
+    opacity: 0;
+
+}
+
+.banner button:hover{
+    opacity: 0.8;
+    color: black;
+}
+
+@keyframes moveBanner{
+    0%{
+        transform: translateY(10rem);
+    
+    }
+    100%{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
