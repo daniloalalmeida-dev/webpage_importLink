@@ -245,39 +245,40 @@ header{
 .conhecimentos{ /*Grid do campo de conhecimentos*/
     display: grid;
     grid-template-columns: repeat(17, 1fr);
-    grid-template-rows: repeat(6, 6rem);
-    row-gap: 0.5rem;
+    grid-template-rows: repeat(2);
+    row-gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.conhecimento:nth-child(1){ /*Sobre Mim*/
+.conhecimento:nth-child(1){ 
     grid-column: 2 / 10;
-    grid-row: 1 / 4;
+    grid-row: 1 / 2;
 }
 
-.conhecimento:nth-child(2){ /*MBA*/
+.conhecimento:nth-child(2){ 
     grid-column: 12 / 17;
-    grid-row: 1 / 4;
+    grid-row: 1 / 2;
 }
-
-.conhecimento:nth-child(3){ /*Exportação*/
+/* Como não estou utilizando o restante do grid, vou deixar comentado;
+.conhecimento:nth-child(3){ 
     grid-column: 6 / 9;
     grid-row: 5 / -1;
 }
 
-.conhecimento:nth-child(4){ /*Importação e Desembaraço*/
+.conhecimento:nth-child(4){ 
     grid-column: 2 / 5;
     grid-row: 5 / -1;
 }
 
-.conhecimento:nth-child(5){ /*Grandes volumes*/
+.conhecimento:nth-child(5){ 
     grid-column: 10 / 13;
     grid-row: 5 / -1;
 }
 
-.conhecimento:nth-child(6){ /*Courier*/
+.conhecimento:nth-child(6){ 
     grid-column: 14 / 17;
     grid-row: 5 / -1;
-}
+} */
 
 .sessao-header{
     display: flex;
@@ -313,12 +314,190 @@ header{
     margin-top: 1rem;
 }
 
-.conhecimentos img{
-    grid-row: 1 / 6;
-    grid-column: 1 / 17;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.7); /*RGB + transparencia */
-    opacity: 0.3;
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
 }
 
+.card{
+    width: 20rem;
+    height: 30rem;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .9;
+    transition: opacity .5s;
+}
+
+.card:hover .card-img-wrapper{
+    opacity: .5;
+
+}
+
+.card-info{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 1rem;
+    text-shadow: 0.3 0.2rem .8rem rgba(0, 0, 0, .3);
+}
+
+.card-info h2{
+    margin-left: 2.5rem;
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f46b45;
+}
+
+.card-info i{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f46b45;
+}
+
+.card-info p{
+    margin-top: 1rem;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    font-family: var(--font-secundary);
+    color: black;
+    font-weight: 600;
+    width: 100%;
+    transition: all .5s;
+}
+
+.card:hover .card-info p{
+    bottom: top;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sessao-contato{
+    width: 100%;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-wrapper{
+    width: 60%;
+    height: 30rem;
+    display: flex;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5)
+}
+
+.contato-left{
+    width: 50%;
+    background:
+        linear-gradient(rgba(15,15,15, 0.2), rgba(22,22,22,0.6)), url(images/contato.jpg);
+    background-size: cover;
+}
+
+.contato-right{
+    width: 50%;
+    background-color: #eee;
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+.sessao-contato h1{
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-primary);
+    color: #272727;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.sessao-contato{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-secundary);
+    color: #272727;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sessao-contato form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group{
+    position: relative;
+}
+
+.input-group textarea{
+    padding-top: 1.5rem;
+    max-width: 25rem;
+    max-height: 5rem;
+}
+
+.field{
+    background: transparent;
+    border: none;
+    width: 20rem;
+    font-size: 1.5rem;
+    font-family: var(--font-secundary);
+    border-bottom: 2px dashed #272727;
+    height: 3rem;
+    outline: none;
+    margin: 1rem 0;
+}
+
+.field-label{
+    position: absolute;
+    left: 0;
+    top: .5rem;
+    font-size: 1.2rem;
+    font-family: var(--font-secundary);
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.field:focus{
+    border-bottom: 1px solid;
+}
+
+.field:focus ~label{
+    top: 0;
+    font-size: 1rem;
+}
+
+.btn-submit{
+    font-family: var(--font-action);
+    font-size: .9rem;
+    color: white;
+    margin-top: 1rem;
+
+    background: #f46b45;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
