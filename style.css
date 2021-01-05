@@ -400,31 +400,22 @@ header{
 
 .contato-wrapper{
     width: 60%;
-    height: 30rem;
+    height: 35rem;
     display: flex;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5)
 }
 
 .contato-left{
-    width: 50%;
+    width: 40%;
     background:
         linear-gradient(rgba(15,15,15, 0.2), rgba(22,22,22,0.6)), url(images/contato.jpg);
     background-size: cover;
 }
 
 .contato-right{
-    width: 50%;
+    width: 60%;
     background-color: #eee;
     padding: 1rem 3rem 3rem 3rem;
-}
-
-.sessao-contato h1{
-    width: 100%;
-    text-align: center;
-    font-family: var(--font-primary);
-    color: #272727;
-    font-size: 3rem;
-    font-weight: lighter;
 }
 
 .sessao-contato{
@@ -438,11 +429,54 @@ header{
     font-weight: 600;
 }
 
+.sessao-contato h1{
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-primary);
+    color: #272727;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
 .sessao-contato form{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.contato-right h2{
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    font-family: var(--font-primary);
+    color: #272727;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.social-media-contato{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.social-media-contato i{
+    color: #eea849;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: color 0.5s;
+}
+
+.social-media-contato i:hover{ /*cor do efeito nos icones*/
+    color: #f46b45;
 }
 
 .input-group{
@@ -488,9 +522,8 @@ header{
 
 .btn-submit{
     font-family: var(--font-action);
-    font-size: .9rem;
+    font-size: 1.2rem;
     color: white;
-    margin-top: 1rem;
 
     background: #f46b45;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
@@ -500,4 +533,10 @@ header{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.btn-submit:hover{
+    color: black;
+    background: #f46b45;
+    transition: color 0.5s;
 }
