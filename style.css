@@ -518,6 +518,15 @@ header{
     font-weight: lighter;
 }
 
+.contato-right a{
+    display: flex;
+    margin-left: 1rem;
+    font-family: var(--font-primary);
+    color: #272727;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
 .social-media-contato{
     width: 100%;
     display: flex;
