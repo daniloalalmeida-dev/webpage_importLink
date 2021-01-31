@@ -1,11 +1,12 @@
+//Formulário de cadastro
 const nodemailer = require('nodemailer');
 
-const user = "contato@importlink.com.br";
-const pass = " ";
+const user = process.env.EMAIL;
+const pass = process.env.SENHA;
 
 let transporter = nodemailer.createTransport({
         host: "importlink.com.br",
-        port: 465,
+        port: process.env.PORTA,
         secure: true,
         auth: {user, pass}
     });
@@ -23,5 +24,5 @@ let transporter = nodemailer.createTransport({
         console.log(err);
     })
     
-
+dotenv.config();
 

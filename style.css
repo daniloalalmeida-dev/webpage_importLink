@@ -332,7 +332,7 @@ header{
 }
 
 .card:hover .card-img-wrapper{
-    opacity: .5;
+    opacity: .3;
 }
 
 .card-info{
@@ -366,7 +366,7 @@ header{
     visibility: hidden;
     font-family: var(--font-secundary);
     color: black;
-    font-weight: 600;
+    font-weight: 800;
     width: 100%;
     transition: all .5s;
 }
