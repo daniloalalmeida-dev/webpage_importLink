@@ -1,14 +1,11 @@
-# webpage_importLink
+# Website da consultoria Import Link
 
-webpage para consultoria Import Link, já em produção, acesse: https://www.importlink.com.br
+## Acesse para mais detalhes da consultoria: https://www.importlink.com.br
 
-## Tarefas
+### Website desenvolvido do zero, como base de aprendizado. Utilizadas as linguagens comuns de marcação, estilo e programação.
 
-O controle de tarefas será realizado no GitHub
+<div>
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"><img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" alt="HTML"></a> <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS"></a> <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JS"></a>
+</div>
 
-## Ícones
 
-:package: nova funcionalidade
-:up: atualização
-:beetle: correção de bugs
-:checkered_flag: release
