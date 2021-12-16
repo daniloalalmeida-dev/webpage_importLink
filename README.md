@@ -1,6 +1,6 @@
 # Website da consultoria Import Link
 
-## Acesse para mais detalhes da consultoria: https://www.importlink.com.br
+## Acesse para mais detalhes da consultoria: <a href="https://www.importlink.com.br" target="_blank">Import Link Consultoria</a>
 
 ### Website desenvolvido do zero, como base de aprendizado. Utilizadas as linguagens comuns de marcação, estilo e programação.
 
